@@ -1,0 +1,46 @@
+<mxfile>
+    <diagram id="Q1i9IuNr3pRtlDTnuBev" name="ページ1">
+        <mxGraphModel dx="954" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="users&lt;br style=&quot;font-size: 15px&quot;&gt;name string null :false&lt;br style=&quot;font-size: 15px&quot;&gt;email string&amp;nbsp; null :false&lt;br style=&quot;font-size: 15px&quot;&gt;encrypted_password string null :false&lt;br style=&quot;font-size: 15px&quot;&gt;lastname string null :false&lt;br style=&quot;font-size: 15px&quot;&gt;firstname string null :false&lt;br style=&quot;font-size: 15px&quot;&gt;edad_id integer null :false&lt;br style=&quot;font-size: 15px&quot;&gt;gender_id&amp;nbsp; integer null :false&lt;br style=&quot;font-size: 15px&quot;&gt;birthday date null :false&lt;br style=&quot;font-size: 15px&quot;&gt;has_many :items&lt;br style=&quot;font-size: 15px&quot;&gt;has_many :sends" style="whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="70" width="290" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="items&lt;br style=&quot;font-size: 15px&quot;&gt;name string null :false&lt;br style=&quot;font-size: 15px&quot;&gt;category_id integer null :false&lt;br style=&quot;font-size: 15px&quot;&gt;item_condition_id integer null :false&lt;br style=&quot;font-size: 15px&quot;&gt;country_id&amp;nbsp; integer null :false&lt;br style=&quot;font-size: 15px&quot;&gt;send_day_id integer null :false&lt;br style=&quot;font-size: 15px&quot;&gt;user references null: false, foreign_key :true&lt;br style=&quot;font-size: 15px&quot;&gt;text text null :false&lt;br style=&quot;font-size: 15px&quot;&gt;belongs_to :user&lt;br&gt;has_one :send" style="whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="70" width="290" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="sends&lt;br style=&quot;font-size: 15px;&quot;&gt;item references null :false, foreign_key :true&lt;br style=&quot;font-size: 15px;&quot;&gt;user references null :false, foreign_key :true&lt;br style=&quot;font-size: 15px;&quot;&gt;belongs_to :user&lt;br style=&quot;font-size: 15px;&quot;&gt;belongs_to :item&lt;br style=&quot;font-size: 15px;&quot;&gt;has_one :address" style="whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="470" width="300" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="address&lt;br style=&quot;font-size: 15px;&quot;&gt;country_id integer null :false&lt;br style=&quot;font-size: 15px;&quot;&gt;city string null :false&lt;br style=&quot;font-size: 15px;&quot;&gt;belongs_to :send" style="whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="470" width="300" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=15;exitX=-0.011;exitY=0.55;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="430" y="330" as="sourcePoint"/>
+                        <mxPoint x="350" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=15;exitX=0.473;exitY=0.001;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="460" as="sourcePoint"/>
+                        <mxPoint x="205" y="364" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;fontSize=15;exitX=0.933;exitY=-0.012;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.001;entryY=0.967;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="460" as="sourcePoint"/>
+                        <mxPoint x="480" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=15;exitX=1.003;exitY=0.531;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.538;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="460" as="sourcePoint"/>
+                        <mxPoint x="510" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
